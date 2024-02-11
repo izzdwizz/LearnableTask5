@@ -1,0 +1,129 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f7f7f7;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 1rem;
+	background-image: radial-gradient(
+			circle at right top,
+			rgba(27, 27, 27, 0.6) 0%,
+			rgb(21, 22, 27) 50%,
+			rgb(21, 22, 27) 100%
+		),
+		radial-gradient(
+			circle at right top,
+			rgb(204, 97, 255) 10%,
+			rgb(204, 97, 255) 10%,
+			rgb(204, 97, 255) 10%,
+			rgba(0, 0, 0, 0) 50%,
+			rgba(0, 0, 0, 0) 50%,
+			rgba(0, 0, 0, 0) 100%
+		);
+	background-repeat: no-repeat;
+	min-height: max-content;
+}
+
+.container {
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	color: #333;
+	text-align: center;
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+	background: linear-gradient(
+		90deg,
+		#717070db,
+		#717070d2,
+		#faf7f796,
+		#faf7f7f5
+	);
+	-webkit-background-clip: text;
+}
+
+p {
+	color: #666;
+	color: #e7e2e2c2;
+
+	text-align: center;
+}
+
+form {
+	margin-top: 20px;
+	border: 1px solid #cccccc71;
+	background: #fefefe13;
+	padding: 7rem 3.6rem;
+	backdrop-filter: blur(5px) grayscale(0.8) opacity(0.7);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	border-radius: 10px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	color: #f4eeeeeb;
+}
+
+input[type='text'] {
+	margin-top: 5px;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #f1e7e7;
+	border-radius: 5px;
+	box-sizing: border-box;
+	background: #fefefea9;
+}
+
+input[type='text']:focus {
+	border: 1px solid #400e42;
+	outline: #400e42;
+	background: #fefefe;
+}
+
+button[type='submit'] {
+	width: 100%;
+	padding: 10px;
+	background-color: #5fcb63;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+button[type='submit']:hover {
+	background-color: #45a049;
+}
+button[type='submit']:focus {
+	border: none;
+	outline: none;
+}
+
+#result {
+	margin-top: 20px;
+	padding: 10px;
+	background-color: #000;
+	border-radius: 10px;
+	color: #fb3434;
+	margin-bottom: 3rem;
+}
+
+.footer {
+	font-family: 'Gothic', sans-serif;
+	text-align: center;
+	margin-top: 20px;
+	color: #666;
+}
