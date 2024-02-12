@@ -1,3 +1,15 @@
+@property --gradient-angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+:root {
+	--clr-1: #380147e7;
+	--clr-2: #530f66e7;
+	--clr-3: #690d98e7;
+	--clr-4: #ad59ede7;
+	--clr-5: #498af4d2;
+}
 body {
 	font-family: Arial, sans-serif;
 	background-color: #f7f7f7;
@@ -17,8 +29,7 @@ body {
 		radial-gradient(
 			circle at right top,
 			rgb(204, 97, 255) 10%,
-			rgb(204, 97, 255) 10%,
-			rgb(204, 97, 255) 10%,
+
 			rgba(0, 0, 0, 0) 50%,
 			rgba(0, 0, 0, 0) 50%,
 			rgba(0, 0, 0, 0) 100%
@@ -58,48 +69,83 @@ p {
 	text-align: center;
 }
 
-form {
+#card-form {
 	margin-top: 20px;
-	border: 1px solid #cccccc71;
-	background: #fefefe13;
+	border: 1px solid #cccccc3a;
 	padding: 7rem 3.6rem;
-	backdrop-filter: blur(5px) grayscale(0.8) opacity(0.7);
+	backdrop-filter: blur(5px);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	border-radius: 10px;
+	position: relative;
+	background: #00000018;
+}
+
+#card-form:hover::before,
+#card-form:hover::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	/* inset: -0.5rem; */
+	z-index: -1 !important;
+	background: conic-gradient(
+		from var(--gradient-angle),
+		var(--clr-3),
+		var(--clr-4),
+		var(--clr-5),
+		var(--clr-4),
+		var(--clr-3)
+	);
+	border-radius: inherit;
+	animation: rotation 15s linear infinite;
+}
+
+form::after {
+	filter: blur(2rem);
 }
 
 label {
 	display: block;
 	margin-bottom: 5px;
 	color: #f4eeeeeb;
+	font-size: 0.75rem;
+}
+
+.input-field {
+	background: transparent;
+	border-bottom: 1px solid #fefefe;
+	margin-top: 3px;
+	margin-bottom: 15px;
+
+	padding: 7px 7px;
 }
 
 input[type='text'] {
-	margin-top: 5px;
 	width: 100%;
-	padding: 10px;
-	margin-bottom: 20px;
-	border: 1px solid #f1e7e7;
 	border-radius: 5px;
+	border-bottom: 1px solid #f1e7e7a5;
 	box-sizing: border-box;
-	background: #fefefea9;
+	background: transparent;
+	outline: transparent;
+	border: transparent;
+	color: #fefefea9;
+	font-size: 0.75rem;
 }
 
-input[type='text']:focus {
-	border: 1px solid #400e42;
-	outline: #400e42;
-	background: #fefefe;
-}
+/* input[type='text']:hover {
+	background: #fefefea9;
+	outline: none;
+} */
 
 button[type='submit'] {
 	width: 100%;
 	padding: 10px;
 	background-color: #5fcb63;
-	color: white;
+	background-color: white;
+	color: #333;
 	border: none;
-	border-radius: 5px;
+	border-radius: 9999999px;
 	cursor: pointer;
 	transition: background-color 0.3s;
 }
@@ -126,4 +172,13 @@ button[type='submit']:focus {
 	text-align: center;
 	margin-top: 20px;
 	color: #666;
+}
+
+@keyframes rotation {
+	0% {
+		--gradient-angle: 0deg;
+	}
+	100% {
+		--gradient-angle: 360deg;
+	}
 }
