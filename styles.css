@@ -48,6 +48,7 @@ body {
 }
 
 h1 {
+	font-size: 3em;
 	color: #333;
 	text-align: center;
 	color: transparent;
@@ -88,7 +89,7 @@ p {
 	position: absolute;
 	inset: 0;
 	/* inset: -0.5rem; */
-	z-index: -1 !important;
+	z-index: -1;
 	background: conic-gradient(
 		from var(--gradient-angle),
 		var(--clr-3),
@@ -101,6 +102,9 @@ p {
 	animation: rotation 15s linear infinite;
 }
 
+.form {
+	position: relative;
+}
 form::after {
 	filter: blur(2rem);
 }
@@ -151,7 +155,8 @@ button[type='submit'] {
 }
 
 button[type='submit']:hover {
-	background-color: #45a049;
+	background-color: #333;
+	color: #fefefe;
 }
 button[type='submit']:focus {
 	border: none;

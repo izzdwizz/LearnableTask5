@@ -9,33 +9,35 @@
 	<body>
 		<h1>Card Validation</h1>
 		<p>Enter your credit card number below.</p>
-		<form id="card-form">
-			<label for="card-number">Card Number</label>
-			<div class="input-field">
-				<input
-					type="text"
-					id="card-number"
-					name="card-number"
-					placeholder="#### - #### - #### - ####"
-					required
-				/>
-			</div>
+		<div class="form">
+			<form id="card-form">
+				<label for="card-number">Card Number</label>
+				<div class="input-field">
+					<input
+						type="text"
+						id="card-number"
+						name="card-number"
+						placeholder="#### - #### - #### - ####"
+						required
+					/>
+				</div>
 
-			<label for="cvv-number">CVV</label>
+				<label for="cvv-number">CVV</label>
 
-			<div class="input-field">
-				<input
-					type="text"
-					id="cvv-number"
-					name="cvv-number"
-					placeholder="123"
-					required
-				/>
-			</div>
+				<div class="input-field">
+					<input
+						type="text"
+						id="cvv-number"
+						name="cvv-number"
+						placeholder="123"
+						required
+					/>
+				</div>
 
-			<br />
-			<button type="submit">Validate</button>
-		</form>
+				<br />
+				<button type="submit">Validate</button>
+			</form>
+		</div>
 		<div id="result"></div>
 
 		<script src="regexValidator.js"></script>
