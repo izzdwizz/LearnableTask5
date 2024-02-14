@@ -31,7 +31,7 @@ form.addEventListener('submit', (event) => {
 	}
 
 	if (cvvRegex.test(cvvNumber)) {
-		message += 'CVV received';
+		message += ' CVV received';
 	} else {
 		message += '<br> <br> Invalid cvv number. Please try again in 30 seconds';
 		console.log(message);
